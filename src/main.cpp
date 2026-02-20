@@ -11,3 +11,16 @@
  */
 int IR_pin = 8;
 int LED_pin = 13;
+/**
+ * @brief Initialize serial communication and configure IR sensor pin.
+ * @details
+ * Starts the Serial port at 9600 baud for logging and configures `IR_PIN` as an input.
+ * This function runs once after the microcontroller resets or powers up.
+ * @author shre-coder638
+ * @date 2026-02-17
+ */
+void setup(){
+    pinMode(IR_pin, INPUT);
+    pinMode(LED_pin, OUTPUT);
+    Serial.begin(9600);
+}
