@@ -24,3 +24,14 @@ void setup(){
     pinMode(LED_pin, OUTPUT);
     Serial.begin(9600);
 }
+/**
+ * @brief Read the IR sensor and print obstacle status.
+ * @details
+ * Continuously reads the digital state of `IR_PIN`. If the sensor reads LOW,
+ * an obstacle is reported; otherwise, no obstacle is reported. A delay is
+ * applied between readings to reduce serial output frequency.
+ * @author shre-coder638
+ * @date 2026-02-17
+ */
+void loop(){
+    int value = digitalRead(IR_pin);
